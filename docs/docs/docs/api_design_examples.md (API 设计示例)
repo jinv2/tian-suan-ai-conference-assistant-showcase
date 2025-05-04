@@ -1,0 +1,64 @@
+# API 设计示例 (API Design Examples)
+
+本文档提供了移动应用可能通过API网关与后端服务交互的RESTful API端点的简化示例。这些仅为说明性示例，不代表完整的API规范。
+
+**认证：** 假定所有请求都需要通过API网关处理的认证（例如，在`Authorization`头中使用Bearer令牌），网关会识别发出请求的用户。
+
+---
+
+## 1. 获取个性化议程 (Get Personalized Agenda)
+
+获取为认证用户量身定制的议程，包括其已注册的会议和相关通用会议。
+
+*   **端点 (Endpoint):** `GET /api/v1/agenda`
+*   **请求体 (Request Body):** 无
+*   **成功响应 (200 OK):**
+
+```json
+{
+  "userId": "usr_123abc",
+  "days": [
+    {
+      "date": "2024-11-15",
+      "schedule": [
+        {
+          "sessionId": "s_001",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "title": "开幕式及CEO主题演讲",
+          "location": "主会场A厅",
+          "speaker": "Dr. Evelyn Reed",
+          "isRegistered": true, // 用户默认注册主旨演讲
+          "type": "keynote"
+        },
+        {
+          "sessionId": "s_101",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "title": "平行分论坛：高级AI算法",
+          "location": "会议室 201",
+          "speaker": "Dr. Alice Chen",
+          "isRegistered": true, // 用户明确注册此分论坛
+          "type": "track_session"
+        },
+        {
+          "sessionId": "s_102",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "title": "平行分论坛：AI在市场营销中的应用",
+          "location": "会议室 202",
+          "speaker": "Mr. Bob Williams",
+          "isRegistered": false,
+          "type": "track_session"
+        }
+        // ... 更多会议安排
+      ]
+    },
+    {
+      "date": "2024-11-16",
+      "schedule": [
+        // ... 第二天的日程安排
+      ]
+    }
+  ]
+}
