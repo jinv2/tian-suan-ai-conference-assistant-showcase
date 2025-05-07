@@ -82,6 +82,20 @@ Experience a simplified version of the AI Assistant's Q&A capabilities on Huggin
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/YOUR_HF_USERNAME/tian-suan-ai-conference-assistant-demo) <!-- Replace with your actual HF Space link -->
 
+---
+## 💖 支持 天算AI 的创新探索 (Support TianSuan AI's Innovative Explorations)
+
+如果您对 **天算AI会议助手** 这样的概念展示项目及其背后的AI技术探索感兴趣，并希望支持我们持续进行这类创新概念的构思、原型设计和开源分享，欢迎通过以下方式表达您的支持：
+
+*   **通过 PayPal.Me 快速捐款：**
+    [https://paypal.me/jinv2](https://paypal.me/jinv2)
+
+    [![PayPal.Me Donate Button](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/jinv2)
+
+您的每一份支持都将鼓励我们探索更多AI赋能的创新应用场景！
+
+---
+
 ## Getting Started (如何理解本项目)
 
 1.  Explore the documentation in the `/docs` folder to understand the system design.
